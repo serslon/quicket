@@ -3,7 +3,9 @@ const includes = (data, filter) => data.reduce((acc, item) => {
     if (children.length) {
         acc.push({
             name: item.name,
-            children
+            children: [
+                ...children
+            ]
         })
     } else if (item.name.includes(filter)) {
         acc.push({
