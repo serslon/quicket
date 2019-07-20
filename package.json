@@ -1,0 +1,19 @@
+{
+  "name": "traveltest",
+  "version": "1.0.0",
+  "description": "the test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test.js",
+    "test:dev": "mocha -w ./ -c ./test.js"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Solonyna Sergey",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
