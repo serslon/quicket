@@ -1,4 +1,10 @@
 const includes = (data, filter) => data.reduce((acc, item) => {
+    if (item.name.includes(filter)) {
+        acc.push({
+            ...item
+        });
+        return acc;
+    }
     const children = item.children ? includes(item.children, filter) : [];
     if (children.length) {
         acc.push({
@@ -6,10 +12,6 @@ const includes = (data, filter) => data.reduce((acc, item) => {
             children: [
                 ...children
             ]
-        })
-    } else if (item.name.includes(filter)) {
-        acc.push({
-            ...item
         })
     }
     return acc;
